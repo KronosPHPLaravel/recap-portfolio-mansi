@@ -28,17 +28,40 @@
           </div>
         </div>
       </nav>
-
-   <div class="container mt-5">
-    <div class="mb-3">
-      <label for="exampleFormControlInput1" class="form-label">Email address</label>
-      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+      <div class="px-4 py-5 mb-5 bg-light rounded-3 px-md-5">
+        <div class="mb-5 text-center">
+            <div class="mb-3 text-white feature bg-primary bg-gradient rounded-3"><i class="bi bi-envelope"></i></div>
+            <h1 class="fw-bolder">Contatta Pippo</h1>
+            <p class="mb-0 lead fw-normal text-muted">We'd love to hear from you</p>
+        </div>
+        <div class="row gx-5 justify-content-center">
+            <div class="col-lg-8 col-xl-6">
+               
+                <form >
+                    <!-- Name input-->
+                    <div class="mb-3 form-floating">
+                        <input class="form-control" id="name" type="text" placeholder="Enter your name..." >
+                        <label for="name">Nome</label>
+                     </div>
+                    <!-- Email address input-->
+                    <div class="mb-3 form-floating">
+                        <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" data-sb-can-submit="no">
+                        <label for="email">Email </label>
+                     </div>
+                 
+                    <!-- Message input-->
+                    <div class="mb-3 form-floating">
+                        <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required" data-sb-can-submit="no"></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                  
+                    
+              
+                    <div class="d-grid"><button class="btn btn-primary btn-lg " id="submitButton" type="submit">Invia</button></div>
+                </form>
+            </div>
+        </div>
     </div>
-    <div class="mb-3">
-      <label for="exampleFormControlTextarea1" class="form-label">Dimmi qualcosa</label>
-      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-    </div>
-   </div>
       <div class="container">
         <footer class="py-3 my-4">
           <ul class="pb-3 mb-3 nav justify-content-center border-bottom">
