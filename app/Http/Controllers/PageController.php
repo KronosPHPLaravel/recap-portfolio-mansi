@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ContactSend;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class PageController extends Controller
 {
@@ -31,5 +33,20 @@ class PageController extends Controller
             }
         }
         abort(404);
+    }
+
+
+    public function invia(Request $request)
+    {
+        //mapping dei dati 
+        $data = [
+            'nome' => $request->name,
+            'email' => $request->input('email'),
+            'message' => $request->input('message', 'No Comment'),
+        ];
+
+        Mail::to($request->input('email'))->send(new ContactSend($data));
+
+        dd('Tutto ok');
     }
 }

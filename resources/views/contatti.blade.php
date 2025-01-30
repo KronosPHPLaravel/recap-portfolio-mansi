@@ -37,27 +37,27 @@
         <div class="row gx-5 justify-content-center">
             <div class="col-lg-8 col-xl-6">
                
-                <form >
-                    <!-- Name input-->
+                <form method="POST" action="/invio-contatto"> 
+                  @csrf
                     <div class="mb-3 form-floating">
-                        <input class="form-control" id="name" type="text" placeholder="Enter your name..." >
+                        <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..." >
                         <label for="name">Nome</label>
                      </div>
                     <!-- Email address input-->
                     <div class="mb-3 form-floating">
-                        <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" data-sb-can-submit="no">
+                        <input class="form-control" id="email" name="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" data-sb-can-submit="no">
                         <label for="email">Email </label>
                      </div>
                  
                     <!-- Message input-->
                     <div class="mb-3 form-floating">
-                        <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required" data-sb-can-submit="no"></textarea>
+                        <textarea class="form-control" name="message" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required" data-sb-can-submit="no"></textarea>
                         <label for="message">Message</label>
                     </div>
                   
                     
               
-                    <div class="d-grid"><button class="btn btn-primary btn-lg " id="submitButton" type="submit">Invia</button></div>
+                    <div class="d-grid"><button class="btn btn-primary btn-lg "  type="submit">Invia</button></div>
                 </form>
             </div>
         </div>
